@@ -1,28 +1,33 @@
 package tests;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.time.StopWatch;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxBinary;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+
 
 public class TesteElemento {
     WebDriver driver;
     String navegador = "firefox";
     DesiredCapabilities capabilities;
-    @BeforeClass
+
     public void setUp(String url){
         if (navegador.contains("firefox")) {
             System.setProperty("webdriver.gecko.driver", "src\\main\\resources\\geckodriver.exe");
-//            FirefoxBinary firefoxBinary = new FirefoxBinary();
-//            firefoxBinary.addCommandLineOptions("--headless");
-//            FirefoxOptions firefoxOptions = new FirefoxOptions();
-//            firefoxOptions.setBinary(firefoxBinary);
+            FirefoxBinary firefoxBinary = new FirefoxBinary();
+            firefoxBinary.addCommandLineOptions("--headless");
+            FirefoxOptions firefoxOptions = new FirefoxOptions();
+            firefoxOptions.setBinary(firefoxBinary);
             capabilities = DesiredCapabilities.firefox();
             capabilities.setCapability("marionette", true);
             driver = new FirefoxDriver();
@@ -31,12 +36,8 @@ public class TesteElemento {
         } else {
             System.setProperty("webdriver.chrome.driver", "src\\main\\resources\\chromedriver.exe");
             ChromeOptions options = new ChromeOptions();
-//            options.addArguments("--headless");
-//            options.addArguments("--window-size=1920,1080");
-//            options.addArguments("--disable-gpu");
-//            options.addArguments("--proxy-server='direct://'");
-//            options.addArguments("--proxy-bypass-list=*");
-//            options.addArguments("--disable-extensions");
+            options.setHeadless(true);
+            options.addArguments("--disable-gpu --proxy-bypass-list=* --proxy-server='direct://'");
             capabilities = DesiredCapabilities.chrome();
             driver = new ChromeDriver(options);
             driver.get(url);
@@ -56,9 +57,9 @@ public class TesteElemento {
 
     @Test
     public void testeOutlook (){
-        String url = "https://outlook.live.com/owa/";
+        setUp("https://outlook.live.com/owa/");
         try {
-            Thread.sleep(10000);
+            Thread.sleep(5000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -133,6 +134,13 @@ public class TesteElemento {
 
     @AfterMethod
     public void quit(){
+        /*File src= ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+        try {
+            // now copy the  screenshot to desired location using copyFile //method
+            FileUtils.copyFile(src, new File("target\\evidencia\\imagem.jpg"));
+        } catch (IOException e){
+
+        }*/
         driver.quit();
     }
 
