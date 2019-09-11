@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Meu Vivo Movel PF WEB Chrome Firefox AMDOCS" verbose="1" parallel="tests" thread-count="50">
+    <test name="Teste Firefox W3C">
+        <parameter name="navegador" value="firefox"/>
+        <classes>
+            <class name="tests.TesteElemento">
+                <methods>
+                    <include name="testeW3C"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Teste Chrome - W3C">
+        <parameter name="navegador" value="chrome"/>
+        <classes>
+            <class name="tests.TesteElemento">
+                <methods>
+                    <include name="testeW3c"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Teste Firefox - Outlook">
+        <parameter name="navegador" value="firefox"/>
+        <classes>
+            <class name="tests.TesteElemento">
+                <methods>
+                    <include name="testeOutlook"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Teste Chrome - Outlook">
+        <parameter name="navegador" value="chrome"/>
+        <classes>
+            <class name="tests.TesteElemento">
+                <methods>
+                    <include name="testeOutlook"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Teste Firefox W3C2">
+        <parameter name="navegador" value="firefox"/>
+        <classes>
+            <class name="tests.TesteElemento">
+                <methods>
+                    <include name="testeW3C"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Teste Chrome - W3C2">
+        <parameter name="navegador" value="chrome"/>
+        <classes>
+            <class name="tests.TesteElemento">
+                <methods>
+                    <include name="testeW3c"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Teste Firefox - Outlook2">
+        <parameter name="navegador" value="firefox"/>
+        <classes>
+            <class name="tests.TesteElemento">
+                <methods>
+                    <include name="testeOutlook"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Teste Chrome - Outlook2">
+        <parameter name="navegador" value="chrome"/>
+        <classes>
+            <class name="tests.TesteElemento">
+                <methods>
+                    <include name="testeOutlook"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Teste Firefox W3C3">
+        <parameter name="navegador" value="firefox"/>
+        <classes>
+            <class name="tests.TesteElemento">
+                <methods>
+                    <include name="testeW3C"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Teste Chrome - W3C3">
+        <parameter name="navegador" value="chrome"/>
+        <classes>
+            <class name="tests.TesteElemento">
+                <methods>
+                    <include name="testeW3c"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Teste Firefox - Outlook3">
+        <parameter name="navegador" value="firefox"/>
+        <classes>
+            <class name="tests.TesteElemento">
+                <methods>
+                    <include name="testeOutlook"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Teste Chrome - Outlook3">
+        <parameter name="navegador" value="chrome"/>
+        <classes>
+            <class name="tests.TesteElemento">
+                <methods>
+                    <include name="testeOutlook"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Teste Firefox W3C4">
+        <parameter name="navegador" value="firefox"/>
+        <classes>
+            <class name="tests.TesteElemento">
+                <methods>
+                    <include name="testeW3C"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Teste Chrome - W3C4">
+        <parameter name="navegador" value="chrome"/>
+        <classes>
+            <class name="tests.TesteElemento">
+                <methods>
+                    <include name="testeW3c"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Teste Firefox - Outlook4">
+        <parameter name="navegador" value="firefox"/>
+        <classes>
+            <class name="tests.TesteElemento">
+                <methods>
+                    <include name="testeOutlook"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Teste Chrome - Outlook4">
+        <parameter name="navegador" value="chrome"/>
+        <classes>
+            <class name="tests.TesteElemento">
+                <methods>
+                    <include name="testeOutlook"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Teste Firefox W3C5">
+        <parameter name="navegador" value="firefox"/>
+        <classes>
+            <class name="tests.TesteElemento">
+                <methods>
+                    <include name="testeW3C"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Teste Chrome - W3C5">
+        <parameter name="navegador" value="chrome"/>
+        <classes>
+            <class name="tests.TesteElemento">
+                <methods>
+                    <include name="testeW3c"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Teste Firefox - Outlook5">
+        <parameter name="navegador" value="firefox"/>
+        <classes>
+            <class name="tests.TesteElemento">
+                <methods>
+                    <include name="testeOutlook"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Teste Chrome - Outlook5">
+        <parameter name="navegador" value="chrome"/>
+        <classes>
+            <class name="tests.TesteElemento">
+                <methods>
+                    <include name="testeOutlook"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>
